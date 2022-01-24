@@ -52,3 +52,38 @@ const promptUser = () => {
         }, 
     ])
 }
+
+const dataHTML = ({ title, description, license, usage, installation, contributions, test, github, email }) =>
+ `# ${title}
+ #### ${username}
+
+ ## Description
+ ${description}
+
+ <br/>
+
+ ${licenseBadge(license)}
+ ## Table of Contents
+ 1. [ Description. ](#description)
+ 2. [ Installation. ](#installation)
+ 3. [ Usage. ](#usage)
+ 4. [ License. ](#license)
+ 5. [ Contributions. ](#contributions)
+ 6. [ Test. ](#test)
+ 7. [ Questions. ](#questions)
+ ## Installation
+ ${installation}
+ ## Usage
+ ${usage}
+ ## License
+ ${license}
+ ## Test
+ ${test}
+
+ ## Questions?
+ Would you like to see more of my work? [Github Link](https://github.com${github})
+ <br/>
+ If you would like to know more please contact me at ${email}
+ ## Resources
+ ${contributions}
+ `;
