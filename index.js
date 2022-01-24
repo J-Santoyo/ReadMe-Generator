@@ -34,6 +34,21 @@ const promptUser = () => {
             type: "input",
             name: "contributions",
             message: "Please enter in any contribution guidelines:"
-        },    
+        },
+        {
+            type: "input",
+            name: "test",
+            message: "Please enter testing instructions:"
+        },
+        {
+            type: "input",
+            name: "github",
+            message: "What is your github username?"
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "What is your email?"
+        }, 
     ])
 }
