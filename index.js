@@ -17,7 +17,7 @@ const promptUser = () => {
             type: "list",
             name: "license",
             message: "Please pick a license",
-            choices: ["MIT", "Boost Software License 1.0", "Unlicense"]
+            choices: ["MIT", "IBM Public License Version 1.0", "Creative Commons - CC0"]
 
         },
         {
@@ -87,3 +87,15 @@ const dataHTML = ({ title, description, license, usage, installation, contributi
  ## Resources
  ${contributions}
  `;
+
+ function licenseBadge(answers) {
+     if (answers === "MIT License"){
+         return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+     }
+     if (answers === "IBM Public License Version 1.0"){
+         return `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)`
+     }
+     if (answers === "Creative Commons = CC0"){
+         return `[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](https://creativecommons.org/publicdomain/zero/1.0/)`
+     }
+ }
