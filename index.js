@@ -1,8 +1,9 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 // need to fix this to activate the inquirer 
-const promptUser = () => {
-    return inquirer.prompt([
+const questions = inquirer
+    .prompt([
+        
         {
             type: "input",
             name: "title",
@@ -51,7 +52,9 @@ const promptUser = () => {
             message: "What is your email?"
         }, 
     ])
-}
+
+    
+
 
 const dataHTML = ({ title, description, license, usage, installation, contributions, test, github, email }) =>
  `# ${title}
