@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-
+// need to fix this to activate the inquirer 
 const promptUser = () => {
     return inquirer.prompt([
         {
@@ -99,3 +99,13 @@ const dataHTML = ({ title, description, license, usage, installation, contributi
          return `[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](https://creativecommons.org/publicdomain/zero/1.0/)`
      }
  }
+
+ const init = () => {
+     promptUser()
+    //  Use writeFileSync method to use promise instead of a callback function 
+    .then((answers) => fs.writeFileSync('README.md'. generateHTML(answers)))
+    .then(() => console.log('Successfully wrote to README.md'))
+    .catch((err) => console.error(err));
+ };
+
+ init();
